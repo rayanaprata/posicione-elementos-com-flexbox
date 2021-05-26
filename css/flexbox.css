@@ -1,0 +1,144 @@
+/* Cabeçalho */
+
+.cabecalhoPrincipal .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cabecalhoPrincipal-nav {
+  display: flex;
+}
+
+/* Conteúdo principal */
+
+.conteudoPrincipal-cursos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.conteudoPrincipal-cursos-link {
+  width: 23%;
+  margin: 1%;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n) {
+  margin-right: 0;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n + 1) {
+  margin-left: 0;
+}
+
+/* Vídeo Sobre */
+
+.videoSobre .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.videoSobre-sobre {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 10;
+}
+
+.videoSobre-sobre-list {
+  flex-grow: 1;
+}
+
+.videoSobre-video {
+  flex-grow: 1;
+}
+
+/* Assim, o tamanho do vídeo será distribuído de maneira a dividir o espaço com a parte de Vantagens. Se ao em vez de 1 tivéssemos colocado 2 o espaço total desta parte seria dividido em 3 cabendo ao vídeo 2/3 e ao Vantagens 1/2. Da mesma maneira podemos distribuir mais espaço para o Vantagens do que para o vídeo. Assim, colocando para o Vantagens um espaço maior, flex-grow: 3; teríamos 3/4 do espaço para o vantagens. */
+
+/* Rodapé NavMap */
+
+.rodapePrincipal-navMap-list {
+  display: flex;
+  /*flex-direction: column;
+	flex-wrap: wrap;*/
+  flex-flow: column wrap;
+  height: 250px;
+}
+
+/* Rodapé Patrocinadores e Contatos */
+
+.rodapePrincipal-patrocinadores .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 70%;
+  margin-right: 5%;
+}
+
+.rodapePrincipal-contatoForm {
+  width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+  display: flex;
+}
+
+/* space mobile */
+
+/*parte mobile*/
+@media (max-width: 768px) {
+  .cabecalhoPrincipal-nav {
+    flex-direction: column;
+  }
+
+  .cabecalhoPrincipal .container {
+    flex-direction: column;
+    align-items: initial;
+    text-align: center;
+  }
+
+  .conteudoPrincipal-cursos {
+    flex-direction: column;
+  }
+
+  .cabecalhoPrincipal-nav-link-app {
+    order: -1;
+  }
+
+  .conteudoPrincipal-cursos-link {
+    width: 100%;
+  }
+
+  .videoSobre .container {
+    flex-direction: column;
+  }
+
+  .videoSobre-video {
+    margin: 0 auto;
+  }
+  .rodapePrincipal-navMap-list {
+    height: auto;
+  }
+
+  .rodapePrincipal-patrocinadores .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rodapePrincipal-patrocinadores-list {
+    margin: 0;
+    width: 100%;
+  }
+
+  .rodapePrincipal-contatoForm {
+    width: 100%;
+  }
+
+  .rodapePrincipal-contatoForm-fieldset {
+    justify-content: center;
+  }
+}
